@@ -1,10 +1,10 @@
 # Arduino_autodiff
 
-这是一个针对Arduino平台的实验性autodiff（https://github.com/autodiff/autodiff）移植版本，用于计算自动差分。
+这是一个针对Arduino平台的实验性[autodiff](https://github.com/autodiff/autodiff)移植版本，用于计算自动差分。
 
 ## 依赖
 
-原版的autodiff依赖于Eigen3，该项目即将原版autodiff的依赖改为使用ArduinoEigen库（https://github.com/hideakitai/ArduinoEigen）。为了正常运行该库，请你安装以下的依赖库：
+原版的autodiff依赖于Eigen3，该项目即将原版autodiff的依赖改为使用ArduinoEigen库。为了正常运行该库，请你安装以下的依赖库：
 
 * [ArxTypeTraits](https://github.com/hideakitai/ArxTypeTraits)
 * [ArduinoEigen](https://github.com/hideakitai/ArduinoEigen)

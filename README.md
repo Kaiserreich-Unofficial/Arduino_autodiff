@@ -1,10 +1,10 @@
 # Arduino_autodiff
 
-This is an experimental port of autodiff for Arduino Boards (from https://github.com/autodiff/autodiff), which is used for easy forward and backward differencing.
+This is an experimental port of [autodiff](https://github.com/autodiff/autodiff) for Arduino Boards, which is used for easy forward and backward differencing.
 
 ## Dependencies
 
-The autodiff library dependency contains the Eigen3. Here I've made some changes to the dependencies of autodiff so that it depends on Eigen's port of Arduino (https://github.com/hideakitai/ArduinoEigen) to be able to run. So the dependency of the AruduinoEigen library is also a dependency of Arduino_autodiff, which you need to download in order to use Arduino_autodiff properly:
+The autodiff library dependency contains the Eigen3. Here I've made some changes to the dependencies of autodiff so that it depends on Eigen's port of Arduino to be able to run. So the dependency of the AruduinoEigen library is also a dependency of Arduino_autodiff, which you need to download in order to use Arduino_autodiff properly:
 
 * [ArxTypeTraits](https://github.com/hideakitai/ArxTypeTraits)
 * [ArduinoEigen](https://github.com/hideakitai/ArduinoEigen)
