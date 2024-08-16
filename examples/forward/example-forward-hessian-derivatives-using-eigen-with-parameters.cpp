@@ -1,9 +1,9 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
-#include <autodiff/forward/dual.hpp>
-#include <autodiff/forward/dual/eigen.hpp>
+#include <autodiff_forward_dual.h>
 using namespace autodiff;
 
 // The scalar function for which the Hessian is needed
@@ -12,7 +12,7 @@ dual2nd f(const ArrayXdual2nd& x, const ArrayXdual2nd& p, const dual2nd& q)
     return (x * x).sum() + (p * p).sum() * q; // sum(x*x) + sum(p*p) + q
 }
 
-int main()
+void setup()
 {
     using Eigen::VectorXd;
     using Eigen::MatrixXd;

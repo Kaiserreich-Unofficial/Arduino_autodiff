@@ -1,7 +1,8 @@
 // C++ includes
 #include <iostream>
 using namespace std;
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_reverse.h>
 using namespace autodiff;
@@ -9,7 +10,7 @@ using namespace autodiff;
 // A two-variable piecewise function for which derivatives are needed
 var f(var x, var y) { return condition(x < y, x * y, x * x); }
 
-int main()
+void setup()
 {
     var x = 1.0;   // the input variable x
     var y = 2.0;   // the input variable y

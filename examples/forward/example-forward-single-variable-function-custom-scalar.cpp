@@ -2,7 +2,8 @@
 #include <iostream>
 #include <complex>
 using namespace std;
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_forward_dual.h>
 using namespace autodiff;
@@ -23,7 +24,7 @@ cxdual f(cxdual x)
     return 1 + x + x*x + 1/x + log(x);
 }
 
-int main()
+void setup()
 {
     cxdual x = 2.0;   // the input variable x
     cxdual u = f(x);  // the output variable u

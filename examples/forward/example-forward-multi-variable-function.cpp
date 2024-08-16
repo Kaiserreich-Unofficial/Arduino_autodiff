@@ -1,6 +1,7 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_forward_dual.h>
 using namespace autodiff;
@@ -11,7 +12,7 @@ dual f(dual x, dual y, dual z)
     return 1 + x + y + z + x*y + y*z + x*z + x*y*z + exp(x/y + y/z);
 }
 
-int main()
+void setup()
 {
     dual x = 1.0;
     dual y = 2.0;

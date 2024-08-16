@@ -1,7 +1,8 @@
 // C++ includes
 #include <iostream>
 using namespace std;
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_reverse.h>
 using namespace autodiff;
@@ -12,7 +13,7 @@ var f(var x)
     return 1 + x + x*x + 1/x + log(x);
 }
 
-int main()
+void setup()
 {
     var x = 2.0;   // the input variable x
     var u = f(x);  // the output variable u

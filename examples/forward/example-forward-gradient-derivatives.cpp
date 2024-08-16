@@ -2,7 +2,8 @@
 #include <iostream>
 #include <array>
 #include <numeric>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_forward_real.h>
 using namespace autodiff;
@@ -16,7 +17,7 @@ real f(VectorXr x)
     return std::accumulate(x.begin(), x.end(), real(0.));
 }
 
-int main()
+void setup()
 {
     VectorXr x{1, 2, 3, 4, 5};                  // the input array x with 5 variables
 

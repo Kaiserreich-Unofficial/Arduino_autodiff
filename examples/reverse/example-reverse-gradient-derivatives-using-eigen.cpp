@@ -1,6 +1,7 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_reverse.h>
 using namespace autodiff;
@@ -11,7 +12,7 @@ var f(const ArrayXvar& x)
     return sqrt((x * x).sum()); // sqrt(sum([xi * xi for i = 1:5]))
 }
 
-int main()
+void setup()
 {
     using Eigen::VectorXd;
 

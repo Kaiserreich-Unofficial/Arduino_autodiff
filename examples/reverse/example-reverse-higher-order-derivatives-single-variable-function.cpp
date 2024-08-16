@@ -1,12 +1,13 @@
 // C++ includes
 #include <iostream>
 using namespace std;
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_reverse.h>
 using namespace autodiff;
 
-int main()
+void setup()
 {
     var x = 0.5;  // the input variable x
     var u = sin(x) * cos(x);  // the output variable u

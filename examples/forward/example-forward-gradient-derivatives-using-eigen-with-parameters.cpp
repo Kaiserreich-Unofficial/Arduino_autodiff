@@ -1,6 +1,7 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_forward_real.h>
 using namespace autodiff;
@@ -11,7 +12,7 @@ real f(const ArrayXreal& x, const ArrayXreal& p, const real& q)
     return (x * x).sum() * p.sum() * exp(q); // sum([xi * xi for i = 1:5]) * sum(p) * exp(q)
 }
 
-int main()
+void setup()
 {
     using Eigen::VectorXd;
 

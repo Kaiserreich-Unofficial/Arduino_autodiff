@@ -1,6 +1,7 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_forward_dual.h>
 using namespace autodiff;
@@ -19,7 +20,7 @@ dual f(dual x, const Params& params)
     return params.a * sin(x) + params.b * cos(x) + params.c * sin(x)*cos(x);
 }
 
-int main()
+void setup()
 {
     Params params;   // initialize the parameter variables
     params.a = 1.0;  // the parameter a of type dual, not double!

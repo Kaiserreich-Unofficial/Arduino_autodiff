@@ -1,9 +1,9 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
-#include <autodiff/forward/dual.hpp>
-#include <autodiff/forward/dual/eigen.hpp>
+#include <autodiff_forward_dual.h>
 using namespace autodiff;
 
 // The scalar function for which the gradient is needed
@@ -12,7 +12,7 @@ dual2nd f(const VectorXdual2nd& x)
     return x.cwiseProduct(x).sum(); // sum([x(i) * x(i) for i = 1:5])
 }
 
-int main()
+void setup()
 {
     using Eigen::MatrixXd;
 

@@ -1,6 +1,7 @@
 // C++ includes
 #include <iostream>
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_forward_real.h>
 using namespace autodiff;
@@ -11,7 +12,7 @@ real4th f(const real4th& x, const real4th& y, const real4th& z)
     return sin(x * y) * cos(x * z) * exp(z);
 }
 
-int main()
+void setup()
 {
     real4th x = 1.0;                                       // the input vector x
     real4th y = 2.0;                                       // the input vector y

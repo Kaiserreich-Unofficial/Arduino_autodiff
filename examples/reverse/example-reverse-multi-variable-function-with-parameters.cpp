@@ -1,7 +1,8 @@
 // C++ includes
 #include <iostream>
 using namespace std;
-
+// Eigen includes
+#include <ArduinoEigenDense.h>
 // autodiff include
 #include <autodiff_reverse.h>
 using namespace autodiff;
@@ -20,7 +21,7 @@ var f(var x, const Params& params)
     return params.a * sin(x) + params.b * cos(x) + params.c * sin(x)*cos(x);
 }
 
-int main()
+void setup()
 {
     Params params;   // initialize the parameter variables
     params.a = 1.0;  // the parameter a of type var, not double!
